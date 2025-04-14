@@ -1,0 +1,11 @@
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\bin\Debug\net9.0\MyCalculatorLibrary.deps.json
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\bin\Debug\net9.0\MyCalculatorLibrary.dll
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\bin\Debug\net9.0\MyCalculatorLibrary.pdb
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.AssemblyInfoInputs.cache
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.AssemblyInfo.cs
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.dll
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\refint\MyCalculatorLibrary.dll
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.pdb
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\ref\MyCalculatorLibrary.dll
