@@ -12,6 +12,8 @@ static class Program
         Console.WriteLine("Console Calculator in C#\r");
         Console.WriteLine("------------------------\r");
 
+        MyCalculator myCalculator = new MyCalculator();
+        
         while (!endApp)
         {
             // Declare variables and set to empty
@@ -61,7 +63,7 @@ static class Program
             {
                 try
                 {
-                    result = MyCalculator.DoOperation(cleanNum1, cleanNum2, op);
+                    result = myCalculator.DoOperation(cleanNum1, cleanNum2, op);
                     if (double.IsNaN(result))
                     {
                         Console.WriteLine("This operation will result in a mathematical error.\n");
@@ -84,5 +86,8 @@ static class Program
 
             Console.WriteLine("\n"); // Friendly line spacing.
         }
+        // Add call to close the JSON writer before return
+        myCalculator.Finish();
+        return;
     }
 }

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "arm0/GXBICw=",
+  "dgSpecHash": "5Ol6UKTRvIs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Mateus Lucena\\Projects\\MyCalculator\\MyCalculator\\MyCalculator.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Mateus Lucena\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

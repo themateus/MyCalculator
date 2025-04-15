@@ -10,3 +10,4 @@ C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.
 C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.pdb
 C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\ref\MyCalculatorLibrary.dll
 C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.sourcelink.json
+C:\Users\Mateus Lucena\Projects\MyCalculator\MyCalculatorLibrary\obj\Debug\net9.0\MyCalculatorLibrary.csproj.AssemblyReference.cache
