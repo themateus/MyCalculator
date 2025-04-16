@@ -1,67 +1,73 @@
-﻿using System.Diagnostics;
-using System.Globalization;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace MyCalculatorLibrary;
 
 public class MyCalculator
 {
-    private JsonWriter writer;
+    private readonly JsonWriter _writer;
     public MyCalculator()
     {
         StreamWriter logfile = File.CreateText("mycalculatorlog.json");
         logfile.AutoFlush = true;
-        writer = new JsonTextWriter(logfile);
-        writer.Formatting = Formatting.Indented;
-        writer.WriteStartObject();
-        writer.WritePropertyName("Operations");
-        writer.WriteStartArray();
+        _writer = new JsonTextWriter(logfile);
+        _writer.Formatting = Formatting.Indented;
+        _writer.WriteStartObject();
+        _writer.WritePropertyName("Operations");
+        _writer.WriteStartArray();
     }
     public double DoOperation(double num1, double num2, string op)
     {
         double result = double.NaN; //Default value is "Not-a-number" if an operation, as division, could result in an error.
         
-        writer.WriteStartObject();
-        writer.WritePropertyName("Operand1");
-        writer.WriteValue(num1);
-        writer.WritePropertyName("Operand2");
-        writer.WriteValue(num2);
-        writer.WritePropertyName("Operation");
+        _writer.WriteStartObject();
+        _writer.WritePropertyName("Operand1");
+        _writer.WriteValue(num1);
+        _writer.WritePropertyName("Operand2");
+        _writer.WriteValue(num2);
+        _writer.WritePropertyName("Operation");
         // Switch statement to do the math.
         switch (op)
         {
-            case "a":
+            case "+":
                 result = num1 + num2;
-                writer.WriteValue("Add");
+                _writer.WriteValue("Add");
                 break;
-            case "s":
+            case "-":
                 result = num1 - num2;
-                writer.WriteValue("Subtract");
+                _writer.WriteValue("Subtract");
                 break;
-            case "m":
+            case "*":
                 result = num1 * num2;
-                writer.WriteValue("Multiply");
+                _writer.WriteValue("Multiply");
                 break;
-            case "d":
+            case "/":
                 // Ask the user to enter a non-zero divisor.
                 if (num2 != 0)
                 {
                     result = num1 / num2;
-                    writer.WriteValue("Divide");
+                    _writer.WriteValue("Divide");
                 }
                 break;
         }
-        writer.WritePropertyName("Result");
-        writer.WriteValue(result);
-        writer.WriteEndObject();
+        _writer.WritePropertyName("Result");
+        _writer.WriteValue(result);
+        _writer.WriteEndObject();
         
         return result;
     }
 
+    public void ShowHistory(List<string> historico)
+    {
+        for (int i = 0; i + 3 <= historico.Count ; i += 4)
+        {
+            Console.WriteLine($"{double.Parse(historico[i]):0.##} {historico[i + 2]} " +
+                              $"{double.Parse(historico[i + 1]):0.##} = {double.Parse(historico[i + 3]):0.##}");        }
+    }
+    
     public void Finish()
     {
-        writer.WriteEndArray();
-        writer.WriteEndObject();
-        writer.Close();
+        _writer.WriteEndArray();
+        _writer.WriteEndObject();
+        _writer.Close();
     }
 }
